@@ -1,0 +1,33 @@
+<?php
+function greeting_menu() {
+  $items = array();
+  $items['hello_user'] = array(
+    'title' => "Welcome User!",
+    'page callback' => 'say_hello',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  $items['goodbye'] = array(
+    'title' => "Thanks for visting!",
+    'page callback' => 'say_goodbye',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+function say_hello() {
+  return "<p> Hello, and welcome to Cameron's Coffee! We hope you will enjoy your stay. Checkout some of our newest coffee options on our homepage.</p>";
+}
+
+function say_goodbye() {
+  return "<p> Goodbye for now! Thank you for visiting Cameron's Coffee. We hope you found what you were looking for, and you will be back again soon!";
+}
+
+function greeting_user_login() {
+  $_GET['destination'] = 'hello_user';
+}
+
+function greeting_user_logout() {
+  $_GET['destination'] = 'goodbye';
+}
