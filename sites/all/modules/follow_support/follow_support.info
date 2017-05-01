@@ -1,0 +1,7 @@
+name = Follow support
+description = Get rid of send copy and subject.
+package = Own
+version = VERSION
+core = 7.x
+files[] = follow_support.module
+stylesheets[all][] = styles.css

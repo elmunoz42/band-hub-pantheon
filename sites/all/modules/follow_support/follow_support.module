@@ -1,0 +1,12 @@
+<?php
+    function follow_support_follow_networks_alter(&$networks, $uid=0) {
+        // Add a network.
+        $networks[$uid]['imdb'] = array(
+            'title' => t('IMDB'),
+            'domain' => 'imdb.com',
+        );
+        $networks[$uid]['sound_cloud'] = array(
+            'title' => t('SoundCloud'),
+            'domain' => 'soundcloud.com',
+        );
+    }

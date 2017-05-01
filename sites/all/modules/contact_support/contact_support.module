@@ -3,9 +3,14 @@
 function contact_form_alter(&$form, &$form_state, $form_id) {
     if ($form_id == 'contact_site_form') {
         $form['copy'] = array(
-            '#type' => 'textfield',
-            '#title' => t('It worked'),
-            '#default_value' => t('Wuzzz up'),
+            '#type' => 'hidden',
+            '#title' => t('Send yourself a copy'),
+            '#default_value' => t('1'),
+        );
+        $form['subject'] = array(
+            '#type' => 'hidden',
+            '#title' => t('Subject'),
+            '#default_value' => t('feedback'),
         );
     }
 }
