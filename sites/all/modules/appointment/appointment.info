@@ -1,0 +1,7 @@
+name = Appointment
+description = Tool that allows user to make appointments.
+package = Own
+version = VERSION
+core = 7.x
+files[] = appointment.module
+stylesheets[all][] = styles.css

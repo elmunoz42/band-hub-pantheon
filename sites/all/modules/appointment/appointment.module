@@ -1,0 +1,67 @@
+<?php
+    function appointment_menu() {
+        $items['make_appointment']=array(
+            'title' => 'Create Appointment',
+            'page callback' => 'drupal_get_form',
+            'page arguments' => array('appointment_form'),
+            'access callback' => TRUE,
+            'type' => MENU_NORMAL_ITEM,
+        );
+        $items['appointment_output']=array(
+            'title' => 'Appointment Output',
+            'page callback' => 'display_appointment',
+            'access callback' => TRUE,
+            'type' => MENU_CALLBACK,
+        );
+        return $items;
+    }
+
+    function appointment_form($form, &$form_state) {
+        $form['title']=array(
+            '#title'=>'Rehearsal title',
+            '#type'=>'textfield',
+            '#description'=>t('Whats the rehearsal for?'),
+            '#required'=>TRUE,
+        );
+        // Add date/time field with Pop-up calendar to the form.
+        $form['datetime'] = array(
+          '#type' => 'date_popup',
+          // Use 'timepicker' option provided by the Date Popup Timepicker module.
+          // #timpicker propertry itself is provided by the Date Popup module.
+          '#timepicker' => 'timepicker',
+          // New #timepicker_options property handled by the Date Popup Timepicker
+          // module and lets to customize timepicker options.
+          '#timepicker_options' => array(
+            'rows' => 6,
+            'minutes' => array(
+              'starts' => 0,
+              'ends' => 56,
+              'interval' => 4,
+            ),
+            'showCloseButton' => TRUE,
+            'closeButtonText' => t('Close'),
+          ),
+        );
+        $form['actions'] = array(
+          '#type' => 'actions',
+        );
+        $form['actions']['submit'] = array(
+          '#type' => 'submit',
+          '#value' => t('Submit'),
+        );
+        return $form;
+        }
+    }
+
+    function appointment_form_submit($form, &$form_state) {
+
+       $_SESSION['title']=$form_state['values']['title'];
+       $_SESSION['datetime']=$form_state['values']['datetime'];
+
+       $form_state['redirect']='appointment_output';
+   }
+   
+   function display_appointment(){
+       $output = $_SESSION['title'] . $_SESSION['datetime'];
+       return 'your appointment is '. $output;
+   }
