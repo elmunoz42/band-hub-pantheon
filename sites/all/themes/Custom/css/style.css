@@ -1,6 +1,22 @@
 html {
-    background-color: red;
+    background-color: lightblue;
+    
 }
-#page {
-    background-color: red;
+#wrapper {
+    background-color: lightgreen;
 }
+#header {
+    background-color: grey;
+}
+#content{
+    background-color: blue;
+}
+#sidebar{
+    background-color: green;
+}
+#footer{
+    background-color: pink;
+}
+/*#page {
+    background: src;
+}*/

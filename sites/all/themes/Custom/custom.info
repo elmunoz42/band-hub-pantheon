@@ -1,5 +1,13 @@
 name = Custom Theme
+description = Custom theme for band-hub
 core = 7.x
 engine = phptemplate
+regions[header] = Header
+regions[sidebar_first] = Right sidebar
+regions[content] = Content
+regions[footer] = Footer
 stylesheets[all][] = css/style.css
+stylesheets[print][] = css/print.css
 scripts[] = js/scripts.js
+features[] = name
+features[] = main_menu

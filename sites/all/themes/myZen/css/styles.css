@@ -9,19 +9,25 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   min-height: 100%;
+  background: #363f4f; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#363f4f , #2c3340); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#363f4f , #2c3340); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#363f4f , #2c3340); /* For Firefox 3.6 to 15 */
+  background: linear-gradientv;
 }
 
 @media print {
   html {
     font-size: 12pt;
+    /*color: #e6e6e6;*/
   }
 }
 
 body {
   margin: 0;
   padding: 0;
-  color: #000;
-  background-color: #fff;
+  color: #e6e6e6;
+  /*background-color: #fff;*/
 }
 
 article,
@@ -61,16 +67,16 @@ template,
 }
 
 a {
-  color: #0072b9;
+  color: #b3002d;
   -webkit-text-decoration-skip: objects;
 }
 
 :visited {
-  color: #003353;
+  color: #800020;
 }
 
 a:active {
-  color: #c00;
+  color: #b3002d;
 }
 
 a:active:not(.button) {
