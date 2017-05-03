@@ -1,5 +1,5 @@
 name = Custom Theme
 core = 7.x
 engine = phptemplate
-stylesheets[all][] = css/styles.css
+stylesheets[all][] = css/style.css
 scripts[] = js/scripts.js
