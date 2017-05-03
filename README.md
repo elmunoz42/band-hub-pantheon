@@ -15,6 +15,7 @@ Allow for comments and rsvp ?
 |TODO| A music uploads page |
 |TODO| A merch store page |
 |TODO| A carpool feature |
+|TODO| Custom Theming - Create a more appealing theme. | 
 
 
 ## Setup
