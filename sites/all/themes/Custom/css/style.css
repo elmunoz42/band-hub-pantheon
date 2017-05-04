@@ -1,9 +1,6 @@
 html {
     background-color: black;
 }
-.nav {
-    background-color: lightgreen;
-}
 .header {
     background-color: grey;
 }
@@ -22,27 +19,39 @@ html {
     float: left; width:100%; clear:both;
 }
 
-.nav,
 .header,
-.body,
 .sub-footer,
 .footer{
-    width: 960px;
+    width: 860px;
     margin: 0 auto;
 }
 
 .nav {
+    margin: 0 auto;
+    width: 860px;
     height: 38px;
     background-color: lightblue;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.nav li{
+    display: inline;
+}
+.nav a{
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-left: 30px;
 }
 
 .body{
+    margin: 0 auto;
     width: 900px;
-    height: 100%;
+    height: 900px;
     box-shadow: 0 0 1px #4c4c4c;
     border: 2px solid;
     border-radius: 10px;
-    background-color: blue;
+    background-color: #36454f;
 }
 
 .body-wrap{
