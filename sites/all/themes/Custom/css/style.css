@@ -1,21 +1,71 @@
 html {
-    background-color: lightblue;
-    
+    background-color: black;
 }
-#wrapper {
+.nav {
     background-color: lightgreen;
 }
-#header {
+.header {
     background-color: grey;
 }
-#content{
-    background-color: blue;
-}
-#sidebar{
+
+.sub-footer{
     background-color: green;
 }
-#footer{
+.footer{
     background-color: pink;
+}
+.nav-wrap,
+.header-wrap,
+.body-wrap,
+.sub-footer-wrap,
+.footer-wrap{
+    float: left; width:100%; clear:both;
+}
+
+.nav,
+.header,
+.body,
+.sub-footer,
+.footer{
+    width: 960px;
+    margin: 0 auto;
+}
+
+.nav {
+    height: 38px;
+    background-color: lightblue;
+}
+
+.body{
+    width: 900px;
+    height: 100%;
+    box-shadow: 0 0 1px #4c4c4c;
+    border: 2px solid;
+    border-radius: 10px;
+    background-color: blue;
+}
+
+.body-wrap{
+    margin-left: 0px;
+    margin-right: 0px;
+    background: #262626; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#4c4c4c, #262626); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#4c4c4c, #262626); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#4c4c4c, #262626); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#4c4c4c, #262626); /* Standard syntax */
+}
+.content{
+    margin: 10px;
+    padding: 10px;
+    float: left;
+    width: 400px;
+    color: #fdf9f3;
+}
+.sidebar-first{
+    margin: 10px;
+    padding: 10px;
+    float: left;
+    width: 300px;
 }
 /*#page {
     background: src;
