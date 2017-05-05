@@ -29,9 +29,11 @@
             <div class="content">
                 <?php print render($page['content']); ?>
             </div>
+
             <div class="sidebar-first">
                 <?php print render($page['sidebar_first']); ?>
             </div>
+
         </div>
     </div>
 

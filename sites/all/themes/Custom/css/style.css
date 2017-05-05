@@ -30,9 +30,11 @@ html {
     margin: 0 auto;
     width: 860px;
     height: 38px;
+    border: 2px solid;
     background-color: lightblue;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+
 }
 .nav li{
     display: inline;
