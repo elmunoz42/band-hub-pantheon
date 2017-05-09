@@ -1,0 +1,49 @@
+<?php
+
+function ajax_link_menu() {
+    $items = [];
+    $items['ajax-test'] = [
+      'title' => 'Ajax Test',
+      'type' => MENU_NORMAL_ITEM,
+      'page callback' => 'ajax_link_page',
+      'access arguments' => ['access content'],
+
+    ];
+    return $items;
+}
+function ajax_link_page() {
+  return [
+    '#type' => 'link',
+    '#title' => t('Ajax Link'),
+    '#href' => 'my-ajax-test/nojs',
+    '#prefix' => '<div id="ajax-display"></div>',
+    '#suffix' => '</div><div id="ajax-display"></div>',
+    '#ajax' => [
+      'effect' => 'fade',
+    ],
+  ];
+}
+
+function ajax_link_callback($ajax) {
+  // Do any database queries, processing, etc.
+  $time = t('The current time is: !time', array('!time' => date('Y-m-d H:i:s')));
+  if ($ajax == 'ajax') {
+    $commands = array();
+    // Ajax command to replace the #ajax-display element with the current time.
+    $commands[] = ajax_command_replace('#ajax-display', "<div id='ajax-display'>". $time . "</div>");
+    // Add a visual "changed" marker to the "#ajax-display" element.
+    $commands[] = ajax_command_changed('#ajax-display');
+    // Trigger our ajax link jQuery plugin.
+    $commands[] = ajax_command_invoke(NULL, "ajax_link");
+    // Menu 'page callback' and #ajax['callback'] functions are supposed to
+    // return render arrays. If returning an Ajax commands array, it must be
+    // encapsulated in a render array structure.
+    ajax_deliver(array('#type' => 'ajax', '#commands' => $commands));
+  }
+  else {
+   // No ajax, just display the time on a page using renderable array.
+   return array(
+     '#markup' => $time,
+   );
+  }
+}
