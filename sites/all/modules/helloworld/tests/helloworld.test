@@ -1,0 +1,26 @@
+<?php
+
+class HelloWorldTests extends DrupalWebTestCase {
+    public static function getInfo() {
+        return array(
+            'name' => 'Hello World',
+            'description' => 'Tests for hello world module',
+            'group' => 'Hello World',
+        );
+    }
+
+
+/**
+*Perform any setup
+*/
+
+public function setUp() {
+    parent::setUp(array('helloworld'));
+}
+
+public function testHelloWorld() {
+    $this->drupalGet('helloworld');
+    $this->assertText('Well hello there!', 'Pass first ever spec on Drups!!!');
+}
+
+}

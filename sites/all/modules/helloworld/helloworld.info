@@ -2,3 +2,4 @@ name = Hello World
 description = Says hello for testing purposes.
 core = 7.x
 files[] = helloworld.module
+files[] = tests/helloworld.test

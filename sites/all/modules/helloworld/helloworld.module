@@ -2,10 +2,15 @@
 
 function helloworld_menu() {
     $items['helloworld'] = array(
-        'title' = 'Hellow World',
-        'type' = MENU_NORMAL_ITEM,
-        'page callback' = 'display_hello',
-        'access arguments' = array('access content'),
+        'title' => 'Hello World',
+        'type' => MENU_NORMAL_ITEM,
+        'page callback' => 'display_hello',
+        'callback access' => TRUE,
+        'access arguments' => array('access content'),
+    );
+    return $items;
+}
 
-    )
+function display_hello() {
+    return t('Well hello there!');
 }

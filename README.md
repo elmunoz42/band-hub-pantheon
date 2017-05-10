@@ -6,17 +6,22 @@ A web app for band members, band managers and their fans. This site leverages Pu
 
 |Status | Objective                          |
 |---------|-----------------------------------|
-|TODO| A page for each band-member |
-|TODO| Follow links to social media. |
-|TODO| A blog post page | http://joythebaker.com/
-|TODO| A rehearsal scheduling feature |
-|TODO| A news/events page | - like the tips and tricks https://smittenkitchen.com/tips/
-Allow for comments and rsvp ?
-|TODO| A music uploads page |
+|SOMEWHAT| Gig tools with contact info and rehearsal scheduling feature |
+|SOMEWHAT| A news/events page | - like the tips and tricks https://smittenkitchen.com/tips/
+|SOMEWHAT| A music uploads page |
+|TODO| A page for each band |
+|TODO| Scrolling lyrics with autoscroll|
+|SOMEWHAT| A blog post page http://joythebaker.com/
+Allow for comments and rsvp ?|
+|SOMEWHAT| Links to social media. |
 |TODO| A merch store page |
-|TODO| A carpool feature |
-|TODO| Custom Theming - Create a more appealing theme. | 
+|TODO| A page for each band-member |
+|WishList| Custom Theming - Create a more appealing theme. |
+|WishList| A carpool feature |
 
+## Testing
+
+* HelloWorld Test and Module to experiment with testing.
 
 ## Setup
 1. Clone repository from https://github.com/elmunoz42/cipher.git
