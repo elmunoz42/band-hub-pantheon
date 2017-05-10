@@ -1,0 +1,4 @@
+name = Ajax Reader
+description = Using Ajax to change nodes and views.
+core = 7.x
+files[] = ajax_reader.module
