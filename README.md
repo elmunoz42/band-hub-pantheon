@@ -6,9 +6,10 @@ A web app for band members, band managers and their fans. This site leverages Pu
 
 |Status | Objective                          |
 |---------|-----------------------------------|
-|SOMEWHAT| Gig tools with contact info and rehearsal scheduling feature |
-|SOMEWHAT| A news/events page | - like the tips and tricks https://smittenkitchen.com/tips/
+|TODO | Create Unit Test |
+|SOMEWHAT| A news/events page - like the tips and tricks https://smittenkitchen.com/tips/ |
 |SOMEWHAT| A music uploads page |
+|SOMEWHAT| Gig tools with contact info and rehearsal scheduling feature |
 |TODO| A page for each band |
 |TODO| Scrolling lyrics with autoscroll|
 |SOMEWHAT| A blog post page http://joythebaker.com/
