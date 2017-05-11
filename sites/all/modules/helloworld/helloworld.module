@@ -1,16 +1,16 @@
 <?php
 
 function helloworld_menu() {
-    $items['helloworld'] = array(
-        'title' => 'Hello World',
-        'type' => MENU_NORMAL_ITEM,
-        'page callback' => 'display_hello',
-        'callback access' => TRUE,
-        'access arguments' => array('access content'),
-    );
-    return $items;
+  $items['helloworld'] = array(
+    'title' => 'Hello World',
+    'type' => MENU_NORMAL_ITEM,
+    'page callback' => 'display_hello',
+    'callback access' => TRUE,
+    'access arguments' => array('access content'),
+  );
+  return $items;
 }
 
 function display_hello() {
-    return t('Well hello there!');
+  return t('Well hello there!');
 }

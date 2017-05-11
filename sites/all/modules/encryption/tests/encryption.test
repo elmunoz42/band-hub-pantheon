@@ -1,0 +1,31 @@
+<?php
+
+class EncryptionTestCase extends DrupalUnitTestCase
+{
+
+  public static function getInfo()
+  {
+    return array(
+      'name' => 'Encryption Tests',
+      'description' => 'Test encryption works properly.',
+      'group' => 'Encryption',
+    );
+  }
+
+  function testPhrase() {
+    // Display message in Drupal GUI
+    $description = 'The input is encrypted by shifting the letters.';
+
+    // Arrange
+    $input_shift = 3;
+    $input_direction = 'right';
+    $input_text = 'hello';
+
+    // Act
+    $result = encrypt($input_shift, $input_direction, $input_text);
+
+    // assert
+    $expected_output = 'khoor';
+    $this->assertTrue($result, $expected_output, $description);
+  }
+}

@@ -33,7 +33,7 @@
 function ajax_link_page() {
   return array(
     '#type' => 'link',
-    '#title' => t('Ajax Link'),
+    '#title' => t('CLICK ME TO CHECK THE TIME!!!'),
     '#href' => 'my-ajax-test/nojs',
     '#prefix' => '<div id="ajax-link">',
     '#suffix' => '</div><div id="ajax-display"></div>',

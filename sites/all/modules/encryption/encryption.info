@@ -1,0 +1,7 @@
+name = Encryption
+description = Custom module for shift encryption of user input.
+package = Own
+core = 7.x
+files[] = encryption.module
+files[] = tests/encryption.test
+dependencies[] = simpletest

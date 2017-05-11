@@ -2,15 +2,18 @@
 
 A web app for band members, band managers and their fans. This site leverages PushTape modules to allow for music uploads and image galleries. This site was built with Drupal using Dev, Test and Live environments in Pantheon.
 
+## Hosting
+
+Site is live on Pantheon:
 ## Planning
 
 |Status | Objective                          |
 |---------|-----------------------------------|
-|TODO | Create Unit Test |
+|DONE | Create Unit Test |
 |SOMEWHAT| A news/events page - like the tips and tricks https://smittenkitchen.com/tips/ |
 |SOMEWHAT| A music uploads page |
 |SOMEWHAT| Gig tools with contact info and rehearsal scheduling feature |
-|TODO| A page for each band |
+|SOMEWHAT| A page for each band |
 |TODO| Scrolling lyrics with autoscroll|
 |SOMEWHAT| A blog post page http://joythebaker.com/
 Allow for comments and rsvp ?|
@@ -18,14 +21,20 @@ Allow for comments and rsvp ?|
 |TODO| A merch store page |
 |TODO| A page for each band-member |
 |WishList| Custom Theming - Create a more appealing theme. |
-|WishList| A carpool feature |
+
+
 
 ## Testing
 
-* HelloWorld Test and Module to experiment with testing.
+* HelloWorld Test and Module to experiment with functional testing.
+* Encryption Test and Module to experiment with unit testing.
+
+## Ajax Experimentation
+
+* Ajax Test link > click on CLICK ON ME button.
 
 ## Setup
-1. Clone repository from https://github.com/elmunoz42/cipher.git
+1. Clone repository from https://github.com/elmunoz42/band-hub-pantheon.git
 2. Set up connection to database system in MAMP (see bellow)
 3. Import database from repo in phpMyAdmin (see bellow)
 4. Create database admin in phpMyAdmin (see bellow)
@@ -46,12 +55,12 @@ Allow for comments and rsvp ?|
 
 ### Create database admin
 * Visit **`localhost:8888/phpMyAdmin`** in browser
-* Click 'Privileges' tab for `cipher`
+* Click 'Privileges' tab for `band-hub`
 * Add user
- - Name: `cipher`
- - Password: `cipher`
+ - Name: `band-hub`
+ - Password: `band-hub`
  - Host: Local
- - All privileges for `cipher`
+ - All privileges for `band-hub`
 
 
 ## Technologies Used
@@ -60,8 +69,28 @@ Allow for comments and rsvp ?|
 * Drupal
 * Pantheon
 
-## Drupal 7 Modules Used
-* Cipher (custom module)
+## Contrib Modules Used
+* advpoll
+* date_popup_timepicker
+* devel
+* entity
+* follow
+* sweaver
+* votingapi
+
+## Custom Modules - Mostly for research purposes :-)
+* ajax_link
+* ajax_reader
+* appointment - in development ...
+* contact_support
+* encryption
+* helloworld
+* greeting
+* follow_support
+
+## Themes
+* Hertz - User interface.
+* Flux - Admin interface.
 
 ## Known Bugs
 
@@ -69,10 +98,10 @@ _No known bugs._
 
 ## Support
 
-_Please contact elmunoz42@gmail.com with questions or concerns._
+_Please contact elmunoz42@gmail.com dmlauby@gmail.com with questions or concerns._
 
 ### License
 
 *MIT License*
 
-Copyright (c) 2017 _**Sean Petterson and Carlos Muñoz Kampff**_
+Copyright (c) 2017 _**Dan Lauby and Carlos Muñoz Kampff**_

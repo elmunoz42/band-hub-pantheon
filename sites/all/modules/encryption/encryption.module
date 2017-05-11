@@ -1,0 +1,108 @@
+<?php
+function encryption_menu() {
+  $items['encryption_input']=array(
+    'title'=>'Create your own encryption',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('encryption_form'),
+    'access callback' => TRUE,
+    'type' => MENU_NORMAL_ITEM,
+  );
+  $items['encryption_output']=array(
+    'title'=>'encryption Result',
+    'page callback' => 'display_encryption',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+function encryption_form($form, &$form_state) {
+  $form['shift_value']=array(
+    '#title'=>'shift value',
+    '#type' => 'textfield',
+    '#description'=>t('What positive integer would you like the letters to be shifted by?'),
+    '#element_validate'=>array('element_validate_integer_positive'),
+    '#required' => TRUE,
+  );
+  $form['direction']=array(
+    '#title'=>'direction',
+    '#type' => 'textfield',
+    '#description'=>t('What direction would you like the letters shifted.'),
+    '#element_validate'=>array('element_validate_leftright'),
+    '#required' => TRUE,
+  );
+  $form['input']=array(
+    '#title'=>'phrase input',
+    '#type' => 'textfield',
+    '#description'=>t('Please input a phrase to be encrypted.'),
+    '#element_validate'=>array('element_validate_unspecial'),
+    '#required' => TRUE,
+  );
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => 'Go',
+  );
+  return $form;
+}
+
+function element_validate_leftright($element) {
+  $constraints = ["left","right"];
+  $input = $element['#value'];
+  if (!in_array($input, $constraints)) {
+    form_error($element, t('Direction must be "left" or "right".'));
+  }
+}
+
+function element_validate_unspecial($element) {
+  $constraints = "[\'^£$%&*()}{@#~?><>,|=_+¬-]";
+  $constraints_arr = str_split($constraints);
+  $input_arr = str_split($element['#value']);
+
+  foreach ($input_arr as $character) {
+    if (in_array($character, $constraints_arr)) {
+      form_error($element, t('No special characters allowed'));
+    }
+  }
+}
+
+
+function encryption_form_submit($form, &$form_state) {
+
+  $_SESSION['shift_value']=$form_state['values']['shift_value'];
+  $_SESSION['direction']=$form_state['values']['direction'];
+  $_SESSION['input']=$form_state['values']['input'];
+
+  $form_state['redirect']='encryption_output';
+}
+
+function encrypt($shift_value, $directionString, $input) {
+  //a)Create variables from respective form_state values.
+  $alphabet=['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+  $direction=1;
+  if($directionString=='left') {
+    $direction=-1;
+  }
+
+  //b)Separate input into lowercase letters.
+  $input_arr= str_split(strtolower($input));
+
+  //c)For each letter find respective letter in alphabet array take its index.
+  //Add shift_value to that index and use it to find new respective letter and push to output array.
+  $output_arr=array();
+  foreach ($input_arr as $letter) {
+    if(in_array($letter, $alphabet)){
+      $alphabet_index = array_search($letter, $alphabet);
+      $shifted_index = ($alphabet_index + ($direction*$shift_value))%26;
+      array_push($output_arr, $alphabet[$shifted_index]);
+    } else {
+      array_push($output_arr, $letter);
+    }
+  }
+
+  //d)Reconstitute string from array and save to Session global.
+  return implode($output_arr);
+}
+function display_encryption(){
+  $output=encrypt($_SESSION['shift_value'],$_SESSION['direction'],$_SESSION['input']);
+  return 'your encrypted message: '. $output;
+}
