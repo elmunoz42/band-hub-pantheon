@@ -4,7 +4,7 @@ A web app for band members, band managers and their fans. This site leverages Pu
 
 ## Hosting
 
-Site is live on Pantheon:
+Site is live on Pantheon: http://live-band-hub.pantheonsite.io/releases
 ## Planning
 
 |Status | Objective                          |
