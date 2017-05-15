@@ -1,3 +1,11 @@
+# Band-Hub
+
+Everything you need from a site to organize your band, rehearsals, gigs, contacts and fans.
+
+# Collaborators
+
+Dan Lauby and Carlos Muñoz Kampff
+
 # Description
 
 A web app for band members, band managers and their fans. This site leverages PushTape modules to allow for music uploads and image galleries. This site was built with Drupal using Dev, Test and Live environments in Pantheon.
