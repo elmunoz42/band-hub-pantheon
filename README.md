@@ -9,12 +9,15 @@ Site is live on Pantheon: http://live-band-hub.pantheonsite.io/releases
 
 |Status | Objective                          |
 |---------|-----------------------------------|
+|DONE| 1) Add news/events page |
+|DONE|2) Add music uploads page |
+|DONE| 3) Gig tools with contact info and rehearsal scheduling feature |
+|DONE| 4) Implement Advanced Poll module |
+|DONE| 5) Implement Calendar module |
+|DONE| 6) Add many-to-many relationship between contact - gig event - band. |
+|DONE| 7) Add blog post page |
+|DONE| 8) Add links to social media. |
 |DONE | Create Unit Test |
-|DONE| A news/events page |
-|DONE | A music uploads page |
-|DONE| Gig tools with contact info and rehearsal scheduling feature |
-|DONE| A blog post page |
-|DONE| Links to social media. |
 |WishList| Scrolling lyrics with autoscroll|
 |WishList| A page for each band |
 |WishList| A merch store page |
