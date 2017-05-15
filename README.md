@@ -10,21 +10,18 @@ Site is live on Pantheon: http://live-band-hub.pantheonsite.io/releases
 |Status | Objective                          |
 |---------|-----------------------------------|
 |DONE | Create Unit Test |
-|SOMEWHAT| A news/events page - like the tips and tricks https://smittenkitchen.com/tips/ |
-|SOMEWHAT| A music uploads page |
-|SOMEWHAT| Gig tools with contact info and rehearsal scheduling feature |
-|SOMEWHAT| A page for each band |
-|TODO| Scrolling lyrics with autoscroll|
-|SOMEWHAT| A blog post page http://joythebaker.com/
+|DONE| A news/events page |
+|DONE | A music uploads page |
+|DONE| Gig tools with contact info and rehearsal scheduling feature |
+|DONE| A blog post page http://joythebaker.com/
 Allow for comments and rsvp ?|
-|SOMEWHAT| Links to social media. |
-|TODO| A merch store page |
-|TODO| A page for each band-member |
-|WishList| Custom Theming - Create a more appealing theme. |
+|DONE| Links to social media. |
+|WishList| Scrolling lyrics with autoscroll|
+|WishList| A page for each band |
+|WishList| A merch store page |
+|WishList| A page for each band-member |
 
-
-
-## Testing
+## Testing Experimentation
 
 * HelloWorld Test and Module to experiment with functional testing.
 * Encryption Test and Module to experiment with unit testing.
