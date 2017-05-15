@@ -1,10 +1,8 @@
-# Band-Hub
+# _Band-Hub_
 
 Everything you need from a site to organize your band, rehearsals, gigs, contacts and fans.
 
-# Collaborators
-
-Dan Lauby and Carlos Muñoz Kampff
+By **Dan Lauby and Carlos Muñoz Kampff**
 
 # Description
 
