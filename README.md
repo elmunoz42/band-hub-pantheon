@@ -13,8 +13,7 @@ Site is live on Pantheon: http://live-band-hub.pantheonsite.io/releases
 |DONE| A news/events page |
 |DONE | A music uploads page |
 |DONE| Gig tools with contact info and rehearsal scheduling feature |
-|DONE| A blog post page http://joythebaker.com/
-Allow for comments and rsvp ?|
+|DONE| A blog post page |
 |DONE| Links to social media. |
 |WishList| Scrolling lyrics with autoscroll|
 |WishList| A page for each band |
